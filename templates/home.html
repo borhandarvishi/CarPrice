@@ -1,3 +1,82 @@
-<h1>
-    test page for prediction Car Price
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Car Price Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="carlength" placeholder="carlength" required="required" /><br>
+        <input type="text" name="carwidth" placeholder="carwidth" required="required" /><br>
+        <input type="text" name="carheight" placeholder="carheight" required="required" /><br>
+        <input type="text" name="curbweight" placeholder="curbweight" required="required" /><br>
+        <input type="text" name="enginesize" placeholder="enginesize" required="required" /><br>
+        <input type="text" name="horsepower" placeholder="horsepower" required="required" /><br>
+        <input type="text" name="citympg" placeholder="citympg" required="required" /><br>
+        <input type="text" name="highwaympg" placeholder="highwaympg" required="required" /><br>
+        <input type="text" name="fueltype_diesel" placeholder="fueltype_diesel" required="required" /><br>
+        <input type="text" name="fueltype_gas" placeholder="fueltype_gas" required="required" /><br>
+        <input type="text" name="enginelocation_front" placeholder="enginelocation_front" required="required" /><br>
+        <input type="text" name="enginelocation_rear" placeholder="enginelocation_rear" required="required" /><br>
+        <input type="text" name="aspiration_std" placeholder="aspiration_std" required="required" /><br>
+        <input type="text" name="aspiration_turbo" placeholder="aspiration_turbo" required="required" /><br>
+        <input type="text" name="doornumber_four" placeholder="doornumber_four" required="required" /><br>
+        <input type="text" name="doornumber_two" placeholder="doornumber_two" required="required" /><br>
+        <input type="text" name="carbody_convertible" placeholder="carbody_convertible" required="required" /><br>
+        <input type="text" name="carbody_hardtop" placeholder="carbody_hardtop" required="required" /><br>
+        <input type="text" name="carbody_hatchback" placeholder="carbody_hatchback" required="required" /><br>
+        <input type="text" name="carbody_sedan" placeholder="carbody_sedan" required="required" /><br>
+        <input type="text" name="carbody_wagon" placeholder="carbody_wagon" required="required" /><br>
+        <input type="text" name="drivewheel_4wd" placeholder="drivewheel_4wd" required="required" /><br>
+        <input type="text" name="drivewheel_fwd" placeholder="drivewheel_fwd" required="required" /><br>
+        <input type="text" name="drivewheel_rwd" placeholder="drivewheel_rwd" required="required" /><br>
+        <input type="text" name="enginetype_dohc" placeholder="enginetype_dohc" required="required" /><br>
+        <input type="text" name="enginetype_dohcv" placeholder="enginetype_dohcv" required="required" /><br>
+        <input type="text" name="enginetype_l" placeholder="enginetype_l" required="required" /><br>
+        <input type="text" name="enginetype_ohc" placeholder="enginetype_ohc" required="required" /><br>
+        <input type="text" name="enginetype_ohcf" placeholder="enginetype_ohcf" required="required" /><br>
+        <input type="text" name="enginetype_ohcv" placeholder="enginetype_ohcv" required="required" /><br>
+        <input type="text" name="enginetype_rotor" placeholder="enginetype_rotor" required="required" /><br>
+        <input type="text" name="cylindernumber_eight" placeholder="cylindernumber_eight" required="required" /><br>
+        <input type="text" name="cylindernumber_five" placeholder="cylindernumber_five" required="required" /><br>
+        <input type="text" name="cylindernumber_four" placeholder="cylindernumber_four" required="required" /><br>
+        <input type="text" name="cylindernumber_six" placeholder="cylindernumber_six" required="required" /><br>
+        <input type="text" name="cylindernumber_three" placeholder="cylindernumber_three" required="required" /><br>
+        <input type="text" name="cylindernumber_twelve" placeholder="cylindernumber_twelve" required="required" /><br>
+        <input type="text" name="cylindernumber_two" placeholder="cylindernumber_two" required="required" /><br>
+        <input type="text" name="fuelsystem_1bbl" placeholder="fuelsystem_1bbl" required="required" /><br>
+        <input type="text" name="fuelsystem_2bbl" placeholder="fuelsystem_2bbl" required="required" /><br>
+        <input type="text" name="fuelsystem_4bbl" placeholder="fuelsystem_4bbl" required="required" /><br>
+        <input type="text" name="fuelsystem_idi" placeholder="fuelsystem_idi" required="required" /><br>
+        <input type="text" name="fuelsystem_mfi" placeholder="fuelsystem_mfi" required="required" /><br>
+        <input type="text" name="fuelsystem_mpfi" placeholder="fuelsystem_mpfi" required="required" /><br>
+        <input type="text" name="fuelsystem_spdi" placeholder="fuelsystem_spdi" required="required" /><br>
+        <input type="text" name="fuelsystem_spfi" placeholder="fuelsystem_spfi" required="required" /><br>
+        
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
